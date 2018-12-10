@@ -1,0 +1,72 @@
+{{!
+* Licensed to the Apache Software Foundation (ASF) under one
+* or more contributor license agreements.  See the NOTICE file
+* distributed with this work for additional information
+* regarding copyright ownership.  The ASF licenses this file
+* to you under the Apache License, Version 2.0 (the
+* "License"); you may not use this file except in compliance
+* with the License.  You may obtain a copy of the License at
+*
+*     http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+}}
+<h2>{{t installer.step1.header}}</h2>
+<p class="alert alert-info">
+  {{t installer.step1.body}}
+</p>
+<p><b>{{t common.stacks}}</b></p>
+<form autocomplete="off">
+  {{#each stack in view.stacks}}
+    <label class="radio">{{view view.stackRadioButton contentBinding="stack"}} {{stack.name}}</label>
+  {{/each}}
+</form>
+
+{{#if App.supports.localRepositories}}
+<div class="accordion" id="advancedRepoAccordion">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#advancedRepoAccordion" href="#collapseOne">
+        {{t installer.step1.advancedRepo.title}}
+      </a>
+    </div>
+    <div id="collapseOne" class="accordion-body collapse">
+      <div class="accordion-inner">
+        <div class="alert alert-info">
+          {{t installer.step1.advancedRepo.message}}
+        </div>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th class="os">{{t common.os}}</th>
+              <th class="baseUrl">{{t installer.step1.advancedRepo.localRepo.column.baseUrl}}</th>
+              <th class="actions"></th>
+            </tr>
+          </thead>
+          <tbody>
+          {{#each localRepo in view.localRepositories}}
+            <tr>
+              <td>{{localRepo.osType}}</td>
+              <td>{{localRepo.baseUrl}}</td>
+              <td>
+                <a class="action" {{action "removeLocalRepository" localRepo target="view" }} >
+                  <i class="icon-minus-sign"></i>{{t common.remove}}
+                </a>
+              </td>
+            </tr>
+          {{/each}}
+          </tbody>
+        </table>
+        <a {{bindAttr class=":btn :pull-right view.isAddOSDisabled:disabled"}} {{action addLocalRepository target="view"}}><i class="icon-plus"></i> Add OS</a>
+      </div>
+    </div>
+  </div>
+</div>
+{{/if}}
+
+<a class="btn pull-left" {{action back}}>&larr; {{t common.back}}</a>
+<a class="btn btn-success pull-right" {{action next}}>{{t common.next}} &rarr;</a>

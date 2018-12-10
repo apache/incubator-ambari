@@ -1,0 +1,61 @@
+~~ Licensed to the Apache Software Foundation (ASF) under one or more
+~~ contributor license agreements.  See the NOTICE file distributed with
+~~ this work for additional information regarding copyright ownership.
+~~ The ASF licenses this file to You under the Apache License, Version 2.0
+~~ (the "License"); you may not use this file except in compliance with
+~~ the License.  You may obtain a copy of the License at
+~~
+~~     http://www.apache.org/licenses/LICENSE-2.0
+~~
+~~ Unless required by applicable law or agreed to in writing, software
+~~ distributed under the License is distributed on an "AS IS" BASIS,
+~~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+~~ See the License for the specific language governing permissions and
+~~ limitations under the License.
+~~
+
+What's New with Ambari?
+
+ * The current Ambari 1.2.5 features:
+
+   * A wizard to configure and manage a secure cluster via Kerberos
+
+   * Ability to customize Dashboard Widgets
+
+   * Support for configuring and running Ambari Web Server via HTTPS
+
+   * Support to setup Ganglia and Nagios HTTPS
+
+   * Run Ambari Server as a non-root user
+
+   * Ambari Server configuration property encryption
+
+   * Support to configure Ambari Server-Agent Two-Way SSL Communication
+
+   * Improved Host Checks during Install Wizard
+
+   * Audit capture of config changes
+
+ * Ambari 1.4.1 will support Hadoop 2.0.  This work is going on under {{{https://git-wip-us.apache.org/repos/asf/incubator-ambari/repo?p=incubator-ambari.git;a=log;h=refs/heads/trunk} trunk}}.
+
+
+Getting Ambari Source
+
+  See {{{https://cwiki.apache.org/confluence/display/AMBARI/Ambari+Development} Ambari Development guide}} on how to check out the source and build it.
+
+JIRA
+
+  You can follow all the work going on by watching the Ambari JIRA project. You can see the
+  JIRA details for Ambari here:
+
+  {{{https://issues.apache.org/jira/issues/?jql=project%20%3D%20AMBARI} https://issues.apache.org/jira/issues/?jql=project%20%3D%20AMBARI}}
+
+User Guide
+
+  Take a look at {{{http://incubator.apache.org/ambari/1.2.5/installing-hadoop-using-ambari/content/index.html} how to install a Hadoop cluster using Ambari 1.2.5}}.
+
+Stay Tuned
+
+  {{{http://incubator.apache.org/ambari/mail-lists.html} Subscribe to the Ambari mailing lists}} and check back here often to learn about our
+  upcoming releases.
+

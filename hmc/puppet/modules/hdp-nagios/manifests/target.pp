@@ -1,1 +1,0 @@
-class hdp-nagios::target(){}
